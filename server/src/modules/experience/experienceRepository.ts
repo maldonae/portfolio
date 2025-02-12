@@ -57,7 +57,17 @@ class ExperienceRepository {
     return result.affectedRows;
   }
   // The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an item by its ID
+  // TODO: Implement the delete operation to remove an experience by its ID
+  async delete(id: number) {
+    // Execute the SQL DELETE query to delete an existing experience from the "experience" table
+    const [result] = await databaseClient.query<Result>(
+      "delete from experience where id = ?",
+      [id],
+    );
+
+    // Return how many rows were affected
+    return result.affectedRows;
+  }
 }
 
 export default new ExperienceRepository();
