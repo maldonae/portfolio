@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import "./DeleteExperience.css";
 
 function DeleteExperience() {
   const navigate = useNavigate();
