@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -8,17 +9,7 @@ function App() {
         <h1 className="logo">Bienvenu</h1>
       </header>
       <Outlet />
-      <footer>
-        Développé par la&nbsp;
-        <a
-          href="https://www.wildcodeschool.com/"
-          className="wcs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wild Code School
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 }
