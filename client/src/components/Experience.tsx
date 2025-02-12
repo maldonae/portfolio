@@ -44,7 +44,6 @@ function Experience() {
                   Ajouter une expérience
                 </button>
               </li>
-
               <li
                 id="experience_organisation"
                 aria-label="experience_organisation"
@@ -58,17 +57,30 @@ function Experience() {
               <li id="content" aria-label="descriptif">
                 {experience.content}
               </li>
-              <li>
-                <button
-                  type="button"
-                  className="edit-button"
-                  onClick={() =>
-                    navigate(`/Modification_experience/${experience.id}`)
-                  }
-                >
-                  Modifier
-                </button>
-              </li>
+              <section className="container-button">
+                <li>
+                  <button
+                    type="button"
+                    className="edit-button"
+                    onClick={() =>
+                      navigate(`/Modification_experience/${experience.id}`)
+                    }
+                  >
+                    Modifier
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className="delete-button"
+                    onClick={() =>
+                      navigate(`/Suppression_experience/${experience.id}`)
+                    }
+                  >
+                    Supprimer
+                  </button>
+                </li>
+              </section>
             </ul>
           </section>
         ))}
