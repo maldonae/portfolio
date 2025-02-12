@@ -1,17 +1,14 @@
 import express from "express";
+import experienceActions from "./modules/experience/experienceActions";
 
 const router = express.Router();
 
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
-
-// Define item-related routes
-import itemActions from "./modules/item/itemActions";
-
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
+router.get("/api/experiences", experienceActions.browse);
+router.get("/api/experiences/:id", experienceActions.read);
+router.post("/api/experiences", experienceActions.add);
 
 /* ************************************************************************* */
 
