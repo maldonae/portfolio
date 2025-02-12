@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import CreaExperience from "./components/CreaExperience";
 import Experience from "./components/Experience";
+import ModifExperience from "./components/ModifExperience";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/Creation_experience",
         element: <CreaExperience />,
+      },
+      {
+        path: "Modification_experience/:id",
+        element: <ModifExperience />,
       },
     ],
   },

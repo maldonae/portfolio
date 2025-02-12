@@ -6,8 +6,6 @@ interface Experience {
   organisation: string;
   poste: string;
   content: string;
-  datestart: string;
-  dateend: string;
 }
 
 function Experience() {
@@ -59,6 +57,17 @@ function Experience() {
               </li>
               <li id="content" aria-label="descriptif">
                 {experience.content}
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="edit-button"
+                  onClick={() =>
+                    navigate(`/Modification_experience/${experience.id}`)
+                  }
+                >
+                  Modifier
+                </button>
               </li>
             </ul>
           </section>
