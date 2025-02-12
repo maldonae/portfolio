@@ -19,7 +19,7 @@ class ExperienceRepository {
       [experience.organisation, experience.poste, experience.content],
     );
 
-    // Return the ID of the newly inserted item
+    // Return the ID of the newly inserted experience
     return result.insertId;
   }
 
@@ -45,7 +45,17 @@ class ExperienceRepository {
   }
 
   // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing item
+  // TODO: Implement the update operation to modify an existing experience
+  async update(experience: Experience) {
+    const { organisation, poste, content, id } = experience;
+
+    const query =
+      "UPDATE experience SET organisation = ?, poste = ?, content = ? WHERE id = ?";
+    const values = [organisation, poste, content, id];
+
+    const [result] = await databaseClient.query<Result>(query, values);
+    return result.affectedRows;
+  }
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an item by its ID
 }

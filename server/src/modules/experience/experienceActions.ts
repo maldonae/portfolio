@@ -6,7 +6,7 @@ import experienceRepository from "./experienceRepository";
 // The B of BREAD - Browse (Read All) operation
 const browse: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch all items
+    // Fetch all experiences
     const experiences = await experienceRepository.readAll();
 
     // Respond with the experiences in JSON format
@@ -20,7 +20,7 @@ const browse: RequestHandler = async (req, res, next) => {
 // The R of BREAD - Read operation
 const read: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch a specific item based on the provided ID
+    // Fetch a specific experience based on the provided ID
     const experienceId = Number(req.params.id);
     const experience = await experienceRepository.read(experienceId);
 
@@ -50,12 +50,41 @@ const add: RequestHandler = async (req, res, next) => {
     // Create the experience
     const insertId = await experienceRepository.create(newExperience);
 
-    // Respond with HTTP 201 (Created) and the ID of the newly inserted item
+    // Respond with HTTP 201 (Created) and the ID of the newly inserted experience
     res.status(201).json({ insertId });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
   }
 };
+const edit: RequestHandler = async (req, res, next) => {
+  try {
+    const experienceId = Number.parseInt(req.params.id);
 
-export default { browse, read, add };
+    // Vérifiez si l'ID est valide
+    if (Number.isNaN(experienceId)) {
+      return; // res.status(400).json({ error: "Invalid experience ID" })
+    }
+
+    const experienceData = {
+      id: experienceId,
+      organisation: req.body.organisation,
+      poste: req.body.poste,
+      content: req.body.content,
+    };
+
+    const affectedRows = await experienceRepository.update(experienceData);
+    // If the experience is not found, respond with HTTP 404 (Not Found)
+    // Otherwise, respond with the experience in JSON format
+    if (affectedRows === 0) {
+      res.sendStatus(404); // Arrêtez ici
+      return;
+    }
+
+    res.sendStatus(204); // Arrêtez ici aussi
+  } catch (err) {
+    next(err); // Passez l'erreur au middleware d'erreurs
+  }
+};
+
+export default { browse, read, add, edit };
