@@ -5,11 +5,13 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Header />
-      <Outlet />
+      <div className="Outlet">
+        <Outlet />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

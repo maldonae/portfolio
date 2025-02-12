@@ -3,3 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Outlet {
+  flex: 1; /* Permet au contenu de prendre l'espace disponible */
+}
+
+footer {
+  margin-top: auto; /* Pousse le footer vers le bas */
+}
