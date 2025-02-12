@@ -86,5 +86,23 @@ const edit: RequestHandler = async (req, res, next) => {
     next(err); // Passez l'erreur au middleware d'erreurs
   }
 };
+const destroy: RequestHandler = async (req, res, next) => {
+  try {
+    // Fetch a specific experience based on the provided ID
+    const experienceId = Number(req.params.id);
+    const experience = await experienceRepository.delete(experienceId);
 
-export default { browse, read, add, edit };
+    // If the experience is not found, respond with HTTP 404 (Not Found)
+    // Otherwise, respond with the experience in JSON format
+    if (experience == null) {
+      res.sendStatus(404);
+    } else {
+      res.json(experience);
+    }
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
+export default { browse, read, add, edit, destroy };
