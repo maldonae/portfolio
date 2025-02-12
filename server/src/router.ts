@@ -9,6 +9,7 @@ const router = express.Router();
 router.get("/api/experiences", experienceActions.browse);
 router.get("/api/experiences/:id", experienceActions.read);
 router.post("/api/experiences", experienceActions.add);
+router.put("/api/experiences/:id", experienceActions.edit);
 
 /* ************************************************************************* */
 
