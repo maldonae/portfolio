@@ -3,6 +3,14 @@
   src: url("../../assets/fonts/roboto.ttf") format("truetype");
 }
 
+.experience_div,
+#content,
+.Form-fields {
+  word-wrap: break-word; /* Permet de couper les mots trop longs */
+  overflow-wrap: break-word; /* Permet le retour à la ligne pour les longues phrases */
+  white-space: normal; /* S'assure que le texte n'est pas en une seule ligne */
+}
+
 .list-experience {
   list-style: none;
   box-shadow: 1px 1px 40px #00f008;
@@ -99,7 +107,12 @@
   .list-experience {
     list-style: none;
   }
-
+  .Experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
   .experience_div {
     font-size: larger;
     padding-top: 2em;

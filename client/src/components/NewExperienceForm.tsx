@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./NewExperienceForm.css";
 
 export type ExperienceType = {
   organisation: string;
@@ -78,10 +79,11 @@ function NewExperienceForm({
           defaultValue={defaultValue.content}
           required
         />
-
-        <button type="submit" className="create-experience-button">
-          {children} AJOUTER UNE EXPÉRIENCE
-        </button>
+        <section className="add-button-form">
+          <button type="submit" className="create-experience-button">
+            {children} AJOUTER UNE EXPÉRIENCE
+          </button>
+        </section>
       </form>
     </section>
   );
