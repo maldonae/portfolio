@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import CreaExperience from "./components/CreaExperience";
+import Experience from "./components/Experience";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -25,8 +26,12 @@ const router = createBrowserRouter([
     element: <App />, // Renders the App component for the home page
     children: [
       {
-        path: "/",
-        element: <CreaExperience />, // La page principale pour l'instant
+        path: "/experiences",
+        element: <Experience />, // La page principale pour l'instant
+      },
+      {
+        path: "/Creation_experience",
+        element: <CreaExperience />,
       },
     ],
   },
