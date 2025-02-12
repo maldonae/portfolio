@@ -33,7 +33,7 @@ function CreaExperience() {
           })
           // si le formulaire est bien rempli, renvoit à la page création
           .then(() => {
-            navigate("/");
+            navigate("/experiences");
           });
       }}
     />
