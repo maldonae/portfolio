@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../../assets/fonts/roboto.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Styles par défaut (mobile-first) */
+.navbar_Header {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #032201, #034a05);
+  color: #00f008;
+  position: relative;
+  font-family: "roboto" sans-serif;
+}
+
+/*Bouton menu burger */
+.burger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #00f008;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+/*Menu mobile */
+.nav_links {
+  position: absolute;
+  top: 0;
+  left: -200px; /* Caché par défaut */
+  width: 120px;
+  background-color: #034a05;
+  backface-visibility: 70%;
+  box-shadow: 2px 2px 5px #034a05;
+  padding: 10px;
+  transition: left 0.3s ease-in-out;
+  list-style: none;
+  flex-direction: column;
+  display: none;
+}
+
+.nav_links.open {
+  left: 0px; /* S'affiche sur le côté gauche */
+  display: flex;
+}
+
+/*Style des liens */
+.nav_links li {
+  padding: 10px;
+  text-align: left;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #00f008;
+  font-weight: bold;
+
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/*Soulignement du lien actif */
+.nav_links a.active {
+  position: relative;
+}
+
+.nav_links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #00f008;
+}
+
+/*Desktop */
+@media (min-width: 768px) {
+  .navbar_Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav_links {
+    position: static;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .nav_links li {
+    padding: 0 15px;
+  }
+
+  .burger {
+    display: none;
+  }
+}
