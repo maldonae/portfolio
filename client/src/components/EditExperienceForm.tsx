@@ -61,9 +61,9 @@ function EditExperienceForm({
           />
         </label>
         <section className="button-modifier-EditForm">
-        <button type="submit" className="update-experience-button">
-          {children}
-        </button>
+          <button type="submit" className="update-experience-button">
+            {children}
+          </button>
         </section>
       </form>
     </section>
