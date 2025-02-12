@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./EditExperienceForm.css";
 
 type Experience = {
   organisation: string;
@@ -59,9 +60,11 @@ function EditExperienceForm({
             required
           />
         </label>
-        <button type="submit" className="update-experience-button">
-          {children}
-        </button>
+        <section className="button-modifier-EditForm">
+          <button type="submit" className="update-experience-button">
+            {children}
+          </button>
+        </section>
       </form>
     </section>
   );
