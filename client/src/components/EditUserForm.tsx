@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./EditUserForm.css";
 
 type User = {
   firstname: string;
@@ -82,9 +83,11 @@ function EditUserForm({ children, defaultValue, onSubmit }: UserFormProps) {
             defaultValue={defaultValue.linkedin}
           />
         </label>
-        <button type="submit" className="update-profil-button">
-          {children}
-        </button>
+        <section className="button-modifier-EditUserForm">
+          <button type="submit" className="update-profil-button">
+            {children}
+          </button>
+        </section>
       </form>
     </section>
   );

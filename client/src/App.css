@@ -13,6 +13,7 @@ body,
 }
 
 .App {
+  background: linear-gradient(to right, #032201, #034a05);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
