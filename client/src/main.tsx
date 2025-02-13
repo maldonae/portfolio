@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import CreaExperience from "./components/CreaExperience";
+import CreaProfil from "./components/CreaProfil";
 import DeleteExperience from "./components/DeleteExperience";
 import Experience from "./components/Experience";
 import ModifExperience from "./components/ModifExperience";
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "Suppression_experience/:id",
         element: <DeleteExperience />,
+      },
+      {
+        path: "creation_de_profil/",
+        element: <CreaProfil />, // La page principale
       },
     ],
   },
