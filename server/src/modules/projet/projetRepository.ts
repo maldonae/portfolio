@@ -17,7 +17,7 @@ class ExperienceRepository {
   async create(projet: Omit<Projet, "id">) {
     // Execute the SQL INSERT query to add a new experience to the "projet" tabl
     const [result] = await databaseClient.query<Result>(
-      "insert into projet (title, desript, nameofteam, picture, user_id) values (?, ?, ?, ?, ?)",
+      "insert into projet (title, descript, nameofteam, picture, user_id) values (?, ?, ?, ?, ?)",
       [
         projet.title,
         projet.descript,

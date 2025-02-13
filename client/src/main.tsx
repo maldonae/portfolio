@@ -16,6 +16,8 @@ import ModifExperience from "./components/ModifExperience";
 import ModifProfil from "./components/ModifProfil";
 import Profil from "./components/Profil";
 
+import CreaProjet from "./components/CreaProjet";
+
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
@@ -66,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "profils",
         element: <Profil />,
+      },
+      {
+        path: "/Creation_projet",
+        element: <CreaProjet />,
       },
     ],
   },
