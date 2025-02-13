@@ -29,7 +29,7 @@ function Profil() {
   }, [id]);
 
   if (!user) {
-    return <p>Chargement...</p>;
+    return <p>N'existe pas, cliquer sur Profil dans le menu...</p>;
   }
 
   return (
