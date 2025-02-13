@@ -7,6 +7,7 @@ type Experience = {
   organisation: string;
   poste: string;
   content: string;
+  user_id: number;
 };
 
 class ExperienceRepository {
@@ -15,8 +16,13 @@ class ExperienceRepository {
   async create(experience: Omit<Experience, "id">) {
     // Execute the SQL INSERT query to add a new experience to the "experience" table
     const [result] = await databaseClient.query<Result>(
-      "insert into experience (organisation, poste, content) values (?, ?, ?)",
-      [experience.organisation, experience.poste, experience.content],
+      "insert into experience (organisation, poste, content, user_id) values (?, ?, ?, ?)",
+      [
+        experience.organisation,
+        experience.poste,
+        experience.content,
+        experience.user_id,
+      ],
     );
 
     // Return the ID of the newly inserted experience
@@ -25,11 +31,11 @@ class ExperienceRepository {
 
   // The Rs of CRUD - Read operations
 
-  async read(id: number) {
+  async read(experienceId: number) {
     // Execute the SQL SELECT query to retrieve a specific experience by its ID
     const [rows] = await databaseClient.query<Rows>(
       "select * from experience where id = ?",
-      [id],
+      [experienceId],
     );
 
     // Return the first row of the result, which represents the experience

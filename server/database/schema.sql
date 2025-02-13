@@ -13,7 +13,9 @@ create table experience (
   id int unsigned primary key auto_increment not null,
   organisation varchar(80) not null,
   poste varchar(255) not null,
-  content TEXT
+  content TEXT,
+  user_id int unsigned not null,
+  foreign key(user_id) references user(id) ON DELETE CASCADE
 );
 
 -- create table item (
