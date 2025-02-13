@@ -1,8 +1,19 @@
+create table user (
+  id int unsigned primary key auto_increment not null,
+  firstname varchar(80) not null,
+  lastname varchar(80) not null,
+  metier varchar(80) not null,
+  email varchar(80) not null unique,
+  userpassword varchar(20) not null,
+  github varchar(80) not null,
+  linkedin varchar(80) not null
+);
+
 create table experience (
   id int unsigned primary key auto_increment not null,
   organisation varchar(80) not null,
   poste varchar(255) not null,
-  content varchar(255) not null
+  content TEXT
 );
 
 -- create table item (
