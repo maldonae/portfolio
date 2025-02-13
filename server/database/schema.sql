@@ -18,6 +18,16 @@ create table experience (
   foreign key(user_id) references user(id) ON DELETE CASCADE
 );
 
+create table projet (
+  id int unsigned primary key auto_increment not null,
+  title varchar(80) not null,
+  descript TEXT,
+  nameofteam varchar(155) not null,
+  picture varchar(80) not null,
+  user_id int unsigned not null,
+  foreign key(user_id) references user(id) ON DELETE CASCADE
+);
+
 -- create table item (
 --   id int unsigned primary key auto_increment not null,
 --   title varchar(255) not null,
