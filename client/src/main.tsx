@@ -12,6 +12,7 @@ import CreaProfil from "./components/CreaProfil";
 import DeleteExperience from "./components/DeleteExperience";
 import Experience from "./components/Experience";
 import ModifExperience from "./components/ModifExperience";
+import ModifProfil from "./components/ModifProfil";
 import Profil from "./components/Profil";
 
 // Import additional components for new routes
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "Suppression_experience/:id",
         element: <DeleteExperience />,
+      },
+      {
+        path: "Modification_de_profil/:id",
+        element: <ModifProfil />,
       },
       {
         path: "creation_de_profil/",
