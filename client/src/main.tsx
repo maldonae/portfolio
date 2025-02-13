@@ -12,6 +12,7 @@ import CreaProfil from "./components/CreaProfil";
 import DeleteExperience from "./components/DeleteExperience";
 import Experience from "./components/Experience";
 import ModifExperience from "./components/ModifExperience";
+import Profil from "./components/Profil";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "creation_de_profil/",
         element: <CreaProfil />, // La page principale
+      },
+      {
+        path: "Profil/:id",
+        element: <Profil />,
+      },
+      {
+        path: "profils",
+        element: <Profil />,
       },
     ],
   },
