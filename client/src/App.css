@@ -13,6 +13,7 @@ body,
 }
 
 .App {
+  color: #00f008;
   background: linear-gradient(to right, #032201, #034a05);
   display: flex;
   flex-direction: column;
@@ -20,6 +21,7 @@ body,
 }
 
 .Outlet {
+  color: #00f008;
   flex: 1; /* Permet au contenu de prendre l'espace disponible */
 }
 

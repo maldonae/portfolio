@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import "./DeleteProfil.css";
 
 function DeleteProfil() {
   const navigate = useNavigate();
