@@ -9,7 +9,7 @@ input {
   height: 30px;
   font-size: medium;
 }
-.update-experience-container {
+.update-profil-container {
   padding-top: 2em;
   background-color: #034a05;
   color: #00f008;
@@ -21,12 +21,12 @@ input {
   height: 100%;
 }
 
-.button-modifier-EditForm {
+.button-modifier-EditUserForm {
   display: flex;
   justify-content: center;
 }
 
-.update-experience-button {
+.update-profil-button {
   display: flex;
   justify-content: center;
   margin-top: 2em;
@@ -61,7 +61,7 @@ input {
     width: 20em;
     font-size: 30px;
   }
-  .update-experience-container {
+  .update-profil-container {
     font-size: 30px;
   }
 }
