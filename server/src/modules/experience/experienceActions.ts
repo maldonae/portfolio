@@ -41,10 +41,13 @@ const read: RequestHandler = async (req, res, next) => {
 const add: RequestHandler = async (req, res, next) => {
   try {
     // Extract the experience data from the request body
+    const { organisation, poste, content, user_id } = req.body;
+
     const newExperience = {
-      organisation: req.body.organisation,
-      poste: req.body.poste,
-      content: req.body.content,
+      organisation,
+      poste,
+      content,
+      user_id: user_id || null,
     };
 
     // Create the experience
@@ -71,6 +74,7 @@ const edit: RequestHandler = async (req, res, next) => {
       organisation: req.body.organisation,
       poste: req.body.poste,
       content: req.body.content,
+      user_id: req.body.user_id || null,
     };
 
     const affectedRows = await experienceRepository.update(experienceData);

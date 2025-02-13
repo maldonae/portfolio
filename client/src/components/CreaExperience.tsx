@@ -9,6 +9,7 @@ function CreaExperience() {
     organisation: "",
     poste: "",
     content: "",
+    user_id: 1,
   };
 
   return (
@@ -22,7 +23,7 @@ function CreaExperience() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(experienceData),
+          body: JSON.stringify({ ...experienceData, user_id: 1 }),
         })
           .then((response) => {
             if (response.status === 403) {

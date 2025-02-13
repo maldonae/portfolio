@@ -20,7 +20,7 @@ function Header() {
       <ul className={isOpen ? "nav_links open" : "nav_links"}>
         <li>
           <NavLink
-            to="/profil/3"
+            to="/profil/1"
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setIsOpen(false)}
           >
