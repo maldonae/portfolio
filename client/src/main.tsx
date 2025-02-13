@@ -10,6 +10,7 @@ import App from "./App";
 import CreaExperience from "./components/CreaExperience";
 import CreaProfil from "./components/CreaProfil";
 import DeleteExperience from "./components/DeleteExperience";
+import DeleteProfil from "./components/DeleteProfil";
 import Experience from "./components/Experience";
 import ModifExperience from "./components/ModifExperience";
 import ModifProfil from "./components/ModifProfil";
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "Suppression_experience/:id",
         element: <DeleteExperience />,
+      },
+      {
+        path: "Suppression_de_profil/:id",
+        element: <DeleteProfil />,
       },
       {
         path: "Modification_de_profil/:id",
