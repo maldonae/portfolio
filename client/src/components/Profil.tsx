@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Profil.css";
 
 interface User {
   id: number;
