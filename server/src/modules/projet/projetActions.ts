@@ -41,22 +41,22 @@ const read: RequestHandler = async (req, res, next) => {
 const add: RequestHandler = async (req, res, next) => {
   try {
     // Extract the projet data from the request body
-    // const file = req.file as Express.Multer.File;
+    const file = req.file as Express.Multer.File;
     const { title, descript, nameofteam, user_id } = req.body;
 
     const newProjet = {
       title,
       descript,
       nameofteam,
-      //   picture: file.filename, // Nom du fichier si présent
+      picture: file.filename, // Nom du fichier si présent
       user_id: user_id || null,
     };
 
     // Create the projet
-    // const insertId = await projetRepository.create(newProjet);
+    const insertId = await projetRepository.create(newProjet);
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted projet
-    // res.status(201).json({ insertId });
+    res.status(201).json({ insertId });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
