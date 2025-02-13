@@ -42,7 +42,7 @@ function ModifProfil() {
             body: JSON.stringify(userData),
           }).then((response) => {
             if (response.status === 204) {
-              navigate("/profil/{user.id}");
+              navigate(`/Profil/${user.id}`);
             }
           });
         }}
