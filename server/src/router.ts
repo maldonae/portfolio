@@ -8,12 +8,12 @@ const router = express.Router();
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
-// import multer from "multer";
-// const upload = multer({ dest: "public/assets/images" });
+import multer from "multer";
+const upload = multer({ dest: "public/assets/images" });
 
 router.get("/api/projets", projetActions.browse);
 router.get("/api/projets/:id", projetActions.read);
-// router.post("/api/projets", upload.single("picture"), projetActions.add);
+router.post("/api/projets", upload.single("picture"), projetActions.add);
 router.delete("/api/projets/:id", projetActions.destroy);
 /* ************************************************************************* */
 router.get("/api/experiences", experienceActions.browse);
