@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <ModifProfil />,
       },
       {
-        path: "creation_de_profil/",
+        path: "/",
         element: <CreaProfil />, // La page principale
       },
       {

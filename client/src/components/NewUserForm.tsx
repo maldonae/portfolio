@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./CreaProfil.css";
 
 export type ProfilType = {
   firstname: string;
@@ -154,10 +155,11 @@ function NewUserForm({ children, defaultValue, onSubmit }: CreaProfilType) {
           placeholder="Entrez votre lien linkedin"
           defaultValue={defaultValue.linkedin}
         />
-
-        <button type="submit" className="create-profil-button">
-          {children}CRÉER MON PROFIL
-        </button>
+        <section className="button-add-user">
+          <button type="submit" className="create-profil-button">
+            {children}CRÉER MON PROFIL
+          </button>
+        </section>
       </form>
     </section>
   );
