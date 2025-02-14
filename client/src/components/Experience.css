@@ -13,7 +13,6 @@
 
 .list-experience {
   gap: 1em;
-  align-items: center;
   display: flex;
   flex-direction: column;
   border: 2px solid #00f008;
