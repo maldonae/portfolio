@@ -31,8 +31,8 @@
   flex: 1; /* Permet au contenu de prendre l'espace disponible */
 }
 .projet_div img {
-  height: 20em;
-  width: 40em;
+  height: 10em;
+  width: 20em;
 }
 
 .Form-fields {
@@ -89,6 +89,11 @@
   .add-button,
   .edit-button {
     width: auto;
+  }
+
+  .projet_div img {
+    height: 20em;
+    width: 40em;
   }
 
   .container-button {

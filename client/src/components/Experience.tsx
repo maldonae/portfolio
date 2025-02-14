@@ -18,11 +18,14 @@ function Experience() {
       .then((response) => response.json())
       .then((data: Experience[]) => {
         setExperiences(data);
+        if (data.length === 0) {
+          navigate("/Creation_experience");
+        }
       })
       .catch((error) =>
         console.error("Erreur lors du chargement des expériences:", error),
       );
-  }, []);
+  }, [navigate]);
 
   if (!experiences) {
     return <p>Chargement...</p>;

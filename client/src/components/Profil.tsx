@@ -21,17 +21,21 @@ function Profil() {
     fetch(`${import.meta.env.VITE_API_URL}/api/users/${id}`)
       .then((response) => response.json())
       .then((data: User) => {
-        setUser(data);
+        if (!data) {
+          navigate("/Creation_profil");
+        } else {
+          setUser(data);
+        }
       })
-      .catch((error) =>
-        console.error("Erreur lors du chargement des utilisateurs:", error),
-      );
-  }, [id]);
+      .catch((error) => {
+        console.error("Erreur lors du chargement des utilisateurs:", error);
+        navigate("/Creation_profil");
+      });
+  }, [id, navigate]);
 
   if (!user) {
-    return <p>N'existe pas, cliquer sur Profil dans le menu...</p>;
+    return <p>Chargement...</p>;
   }
-
   return (
     <>
       <div className="profil_div" key={user.id}>
