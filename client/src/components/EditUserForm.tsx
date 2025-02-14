@@ -36,7 +36,7 @@ function EditUserForm({ children, defaultValue, onSubmit }: UserFormProps) {
         }}
       >
         <label className="updateForm-fields">
-          Prenom:
+          Prénom:
           <input
             type="text"
             name="firstname"
