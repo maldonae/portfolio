@@ -64,6 +64,10 @@ const router = createBrowserRouter([
         element: <CreaProfil />, // La page principale
       },
       {
+        path: "/Creation_profil",
+        element: <CreaProfil />, // La page principale
+      },
+      {
         path: "Profil/:id",
         element: <Profil />,
       },
