@@ -91,7 +91,7 @@ function NewProjetForm({ children, defaultValue, onSubmit }: CreaProjetType) {
           required
         />
 
-        <label htmlFor="photo">AJOUTER PHOTO DU PROJET *</label>
+        <label htmlFor="photo">AJOUTER UNE IMAGE DU PROJET *</label>
         <input type="file" name="picture" />
 
         <section className="add-button-form">
