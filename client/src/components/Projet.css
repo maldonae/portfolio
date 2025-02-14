@@ -11,6 +11,10 @@
 }
 
 .list-projet {
+  gap: 0.5em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   border: 2px solid #00f008;
   list-style: none;
   box-shadow: 3px 5px 63px #00f008;
@@ -28,6 +32,9 @@
   font-size: medium;
   padding-left: 1em;
   padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
   flex: 1; /* Permet au contenu de prendre l'espace disponible */
 }
 .projet_div img {
