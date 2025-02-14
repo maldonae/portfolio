@@ -19,11 +19,14 @@ function Projet() {
       .then((response) => response.json())
       .then((data: ProjetType[]) => {
         setProjets(data);
+        if (data.length === 0) {
+          navigate("/Creation_projet");
+        }
       })
       .catch((error) =>
         console.error("Erreur lors du chargement des projets:", error),
       );
-  }, []);
+  }, [navigate]);
 
   if (!projets) {
     return <p>Chargement...</p>;
