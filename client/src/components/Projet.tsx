@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Projet.css";
 
 interface ProjetType {
   id: number;
@@ -30,9 +31,9 @@ function Projet() {
 
   return (
     <>
-      <h1 className="h1_projet">Projet</h1>
+      <h1 className="h1_projet">Projets</h1>
 
-      <div className="experience_div">
+      <div className="projet_div">
         {projets.map((projet) => (
           <section className="Projets" key={projet.id}>
             <ul className="list-projet">
@@ -56,7 +57,7 @@ function Projet() {
                 {projet.nameofteam}
               </li>
               <img
-                className="img-knight"
+                className="picture-projet"
                 src={`${import.meta.env.VITE_API_URL}/assets/images/${projet.picture}`}
                 alt={projet.picture}
               />

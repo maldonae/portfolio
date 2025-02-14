@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import "./DeleteProjet.css";
 
 function DeleteProjet() {
   const navigate = useNavigate();

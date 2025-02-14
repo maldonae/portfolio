@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./NewProjetForm.css";
 
 export type ProjetType = {
   title: string;
