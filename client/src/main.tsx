@@ -12,6 +12,7 @@ import CreaProfil from "./components/CreaProfil";
 import CreaProjet from "./components/CreaProjet";
 import DeleteExperience from "./components/DeleteExperience";
 import DeleteProfil from "./components/DeleteProfil";
+import DeleteProjet from "./components/DeleteProjet";
 import Experience from "./components/Experience";
 import ModifExperience from "./components/ModifExperience";
 import ModifProfil from "./components/ModifProfil";
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "/projets",
         element: <Projet />,
+      },
+      {
+        path: "Suppression_projet/:id",
+        element: <DeleteProjet />,
       },
     ],
   },
