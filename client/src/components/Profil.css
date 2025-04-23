@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../../assets/fonts/roboto.ttf") format("truetype");
+}
+
+.profil_div {
+  padding-bottom: 3em;
+  background: linear-gradient(to right, #032201, #034a05);
+  text-align: center;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #00f008;
+  gap: 0.5em;
+  font-family: "roboto", sans-serif;
+  font-size: medium;
+  flex: 1;
+}
+
+#profil-mail,
+#profil-github,
+#profil-linkedin {
+  height: 7em;
+}
+
+.github_donnees,
+.email_donnees,
+.linkedin_donnees {
+  color: #00f008;
+  justify-items: center;
+  padding: 2em;
+}
+
+.nom_prenom {
+  padding-top: 2em;
+  font-size: medium;
+}
+
+#photo_eric {
+  border-radius: 70%;
+  height: 8em;
+  width: 8em;
+  box-shadow: 1px 4px 40px #00f008;
+}
+
+#profil-email,
+#profil-github,
+#profil-linkedin {
+  align-content: center;
+  font-size: larger;
+}
+
+#profil-metier {
+  padding: 2em;
+  font-size: x-large;
+}
+
+.btn-edit-profile {
+  padding: 10px;
+  border: solid white 1px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px rgba(1, 250, 17, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: "roboto", sans-serif;
+  color: rgb(1, 1, 1);
+  text-align: center;
+  background-color: #00f008;
+}
+
+@media (min-width: 768px) {
+  .profil_div {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    font-size: large;
+    flex: 1;
+  }
+  .donnees {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 1.7em;
+  }
+  #profil-email,
+  #profil-github,
+  #profil-linkedin {
+    padding: 3em;
+  }
+
+  .github_donnees,
+  .email_donnees,
+  .linkedin_donnees {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
+  .nom_prenom {
+    padding-top: 3em;
+    font-size: large;
+  }
+  #photo_eric {
+    height: 10em;
+    width: 10em;
+  }
+}

@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../../assets/fonts/roboto.ttf") format("truetype");
+}
+
+.experience_div,
+#content,
+.Form-fields {
+  word-wrap: break-word; /* Permet de couper les mots trop longs */
+  overflow-wrap: break-word; /* Permet le retour à la ligne pour les longues phrases */
+  white-space: normal; /* S'assure que le texte n'est pas en une seule ligne */
+}
+
+.list-experience {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #00f008;
+  list-style: none;
+  box-shadow: 3px 5px 63px #00f008;
+  border-radius: 1em;
+  gap: 2em;
+}
+
+.experience_div {
+  height: 100%;
+  padding-bottom: 2em;
+  background: linear-gradient(to right, #032201, #034a05);
+  padding-top: 2em;
+  text-align: center;
+  color: #00f008;
+  font-family: "roboto", sans-serif;
+  font-size: medium;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  flex: 1; /* Permet au contenu de prendre l'espace disponible */
+}
+
+.Form-fields {
+  border-radius: 8px;
+  margin-top: 0.5em;
+  font-size: 19px;
+}
+
+.delete-button {
+  margin: 2em 0 1em;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: "roboto", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ff2600;
+}
+
+.add-button,
+.edit-button {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 10px;
+  border: solid white 1px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px rgba(1, 250, 17, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: "roboto", sans-serif;
+  color: rgb(1, 1, 1);
+  text-align: center;
+  background-color: #00f008;
+}
+
+.organisation {
+  font-size: medium;
+}
+
+.h1_experience {
+  color: #00f008;
+  text-align: center;
+  background: linear-gradient(to right, #032201, #034a05);
+}
+
+#poste,
+#content {
+  padding: 0.5;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .add-button,
+  .edit-button {
+    width: auto;
+  }
+
+  .container-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .list-experience {
+    list-style: none;
+  }
+  .Experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .experience_div {
+    font-size: larger;
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    gap: 2em;
+    flex: 1; /* Ajouté pour éviter le déplacement du footer */
+  }
+}

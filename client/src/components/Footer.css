@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../../assets/fonts/roboto.ttf") format("truetype");
+}
+
+.footer {
+  background: linear-gradient(to right, #032201, #034a05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  font-family: "roboto", sans-serif;
+  color: #00f008;
+  padding: 1em;
+  /* margin-top: auto; Pousse le footer vers le bas */
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: large;
+  }
+}
